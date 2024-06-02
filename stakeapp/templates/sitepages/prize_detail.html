@@ -1,0 +1,24 @@
+{% extends 'sitepages/base1.html' %}
+{% load static%}
+{% block homepage_content %}
+        
+        <div class="about-hero-section">
+            <h2>{{ ptitle}}</h2>
+        </div>
+
+        <div class="prize-details">
+            <div class="prize-details-left">
+                <img src="{{ prize.image.url }}" alt="{{ prize.name }}" height="400px" width="100%" style="border-radius: 10px; margin-bottom: 30px;">
+                <a href="{% url 'sitepages:enter_to_win' prize.id %}" class="prize-button">Enter to win</a>
+            </div>
+            <div class="prize-details-right">
+                <h2 style="margin-bottom: 20px;">About this prize</h2>
+                <p style="margin-bottom: 20px;">{{ prize.name }}</p>
+                <h2 style="margin-bottom: 20px;">Details</h2>
+                <p style="margin-bottom: 20px;">{{ prize.value }}</p>
+                <p style="margin-bottom: 20px;">{{ prize.details }}</p>
+            </div>
+        </div>
+
+
+{% endblock %}

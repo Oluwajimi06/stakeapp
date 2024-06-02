@@ -1,0 +1,86 @@
+{% extends 'sitepages/base1.html' %}
+{% load static%}
+{% block homepage_content %}
+    
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <img src="{% static '/img/US-dollar.jpg' %}" alt="" class="hero-img">
+        <div class="content">
+            <h1>Amazing cash prizes, gifts, and cars up for grab.</h1>
+            <button>GET STARTED</button>
+        </div>
+    </div>
+    
+    <div class="hero-box">
+            <h2 style="margin-bottom: 10px;">🌟 Unlock Incredible Rewards with Every Stake!</h2>
+            <p>Embark on an adventure of winning like never before! Stake with us and stand a chance to win amazing cash prizes, luxurious cars, dream vacations, and more! Our platform offers you the opportunity to elevate your stakes into unforgettable experiences.</p>
+    </div>
+<h2 style="text-align: center;">WEEKLY GRAND PRIZES</h2>
+    <div class="prizes">
+        {% for prize in prizes %}
+        <div class="prize-1">
+            <img src="{{ prize.image.url }}" alt="" height="180px" width="100%" style="border-radius: 20px;">
+            <div class="prize-1-content">
+                <h3 style="margin-bottom: 10px;">{{ prize.name }}</h3>
+                <button><a href="{% url 'sitepages:prize_detail' prize.id %}" style="text-decoration: none;color: white;">View Prize</a></button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+       
+
+    <section class="testimonials">
+        <h2 style="color: #7C28F2;">Testimonials</h2>
+        <h2 class="services-content-2">Feedbacks from our Winners</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veniam.</p>
+              <div style="display: flex;align-items: center;margin-top: 20px;">
+                <img src="{% static 'img/Ellipse 28.png' %}" alt="">
+                <p style="margin-left: 20px;">Smith james</p>
+            </div>
+            </div>
+            <div class="testimonial">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veniam.</p>
+              <div style="display: flex;align-items: center;margin-top: 20px;">
+                <img src="{% static 'img/Ellipse 29.png' %}" alt="">
+                <p style="margin-left: 20px;">Smith james</p>
+            </div>
+            </div>
+            <div class="testimonial">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veniam.</p>
+              <div style="display: flex;align-items: center;margin-top: 20px;">
+                <img src="{% static 'img/Ellipse 30.png' %}" alt="">
+                <p style="margin-left: 20px;">Smith james</p>
+            </div>
+            </div>
+            <div class="testimonial">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veniam.</p>
+                <div style="display: flex;align-items: center;margin-top: 20px;">
+                    <img src="{% static 'img/Ellipse 28.png' %}" alt="">
+                    <p style="margin-left: 20px;">Smith james</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veniam.</p>
+                <div style="display: flex;align-items: center;margin-top: 20px;">
+                    <img src="{% static 'img/Ellipse 29.png' %}" alt="">
+                    <p style="margin-left: 20px;">Smith james</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, veniam.</p>
+                <div style="display: flex;align-items: center;margin-top: 20px;">
+                    <img src="{% static 'img/Ellipse 30.png' %}" alt="">
+                    <p style="margin-left: 20px;">Smith james</p>
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+          </div>
+          
+    
+     </section>
+
+    {% endblock %}
+    
+    

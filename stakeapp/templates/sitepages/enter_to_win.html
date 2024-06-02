@@ -1,0 +1,83 @@
+{% extends 'sitepages/base1.html' %}
+{% load static%}
+{% block homepage_content %}
+<style>
+     .container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    text-align: center;
+                }
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .form-group {
+                    width: 48%;
+                    margin-bottom: 20px;
+                }
+                .form-group.full-width {
+                    width: 100%;
+                }
+                .form-control {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                }
+                button.btn {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                button.btn:hover {
+                    background-color: #0056b3;
+                }
+</style>
+      <div class="about-hero-section">
+        <h2>Enter to  {{ptitle}}</h2>
+    </div>
+            <div class="container">
+                <h1 style="margin-bottom: 20px;">Enter details</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_first_name">First name:</label>
+                        {{ form.first_name }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_last_name">Last name:</label>
+                        {{ form.last_name }}
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="id_email">Email:</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="id_address">Address:</label>
+                        {{ form.address }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_city">City:</label>
+                        {{ form.city }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_zip_code">Zip code:</label>
+                        {{ form.zip_code }}
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="id_phone_number">Phone number:</label>
+                        {{ form.phone_number }}
+                    </div>
+                    <button type="submit" class="btn">Proceed</button>
+                </form>
+            </div>
+
+
+{% endblock %}

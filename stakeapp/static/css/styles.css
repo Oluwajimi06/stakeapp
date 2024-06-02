@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: black;
+    height: 100px;
+    padding: 12px 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .logo img {width: 150px;}
+  .menu {display: flex;}
+  .menu li {padding-left: 30px;}
+  .menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: 0.15s ease-in-out;
+  }
+  .menu li a:hover:after {width: 100%;}
+  .open-menu , .close-menu {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+  }
+  .open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  .close-menu {
+    top: 20px;
+    right: 20px;
+  }
+  #check {display: none;}
+  
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff; /* Adjust button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: #0056b3; /* Adjust hover color */
+}
+
+.hero-box {
+    position: relative;
+    bottom: 100px;
+    margin: 50px;
+    height: 200px;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+}
+.prizes{
+    background-color: black;
+    height: 400px;
+    padding: 40px;
+    display: flex;
+}
+.prize-1{
+    background-color: white;
+    border-radius: 20px;
+    height: 270px;
+    text-align: center;
+    width: 30%;
+    margin: 20px;
+}
+
+button{
+    background: black;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+}
+.testimonials{
+    background-color: #E5E5E5; 
+      height: 500px;
+      padding: 50px;
+  }
+  .testimonial-slider {
+      margin-top: 30px;
+      display: flex;
+      overflow: hidden;
+    }
+    
+  .testimonial {
+      flex: 0 0 33.33%;
+      padding: 20px;
+      /* text-align: center; */
+      margin: 0 15px;
+      color: #210746;
+      border-radius: 10px;
+      border: 2px solid #FFFFFF; /* Border color and width */
+      padding: 20px; /* Padding inside the box */
+      background-color: #FFFFFF; /* Background color */
+      position: relative; /* Position container */
+  }
+  
+  #cursor {
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  
+  /* Hiding the arrows */
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+
+  footer{
+    background-color: black;
+    color: white;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 50px;
+    height: 300px;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.footer-links li{
+    list-style: none;
+}
+.footer-links li a{
+    color: #fff;
+    text-decoration: none;
+}
+/* ABOUT US PAGE */
+.about-hero-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 400px; 
+    background-color: #007bff; 
+}
+
+.about-hero-section h2 {
+    margin: 0; 
+    font-size: 24px; 
+    color: black; 
+}
+.about-content{
+    line-height: 30px;
+    padding: 50px;
+}
+/* weekly grand prize page */
+.explore-prizes {
+    padding-top: 20px;
+    text-align: center;
+    background-color: black;
+}
+/* CONTACT PAGE */
+.contact{
+    display: flex;
+    align-items: center;
+    height: 800px;
+    padding: 50px;
+}
+.contact-left{
+    width: 50%;
+}
+.contact-right{
+    width: 50%;
+}
+/* Style for form container */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for input fields */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Style for submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for submit button on hover */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for form success message */
+.form-success {
+    margin-top: 10px;
+    color: green;
+}
+
+/* Style for form error message */
+.form-error {
+    margin-top: 10px;
+    color: red;
+}
+/* prize details */
+.prize-details{
+    display: flex;
+    height: 600px;
+    padding: 50px;
+}
+.prize-details-left{
+    width: 50%;
+}
+.prize-details-right{
+    margin-left: 20px;
+    width: 50%;
+}
+.prize-button{
+    background-color: #007bff;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 20px;
+}
+@media(max-width:767px){
+    body{
+        font-size: 1rem;
+    }
+    .nav-bar {
+   
+        height: 80px;
+        padding: 12px 30px;
+      }
+    
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100; 
+        background-color: black;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+    
+    
+    
+    .hero-box {
+        margin: 20px;
+        height: 260px;
+        line-height: 25px;
+        padding: 10px;
+    }
+    .hero-img {
+        max-width: 100%; /* Adjust image width on smaller screens */
+        height: 500px;
+    }
+    .content h1 {
+        font-size: 1.7rem;
+    }
+    .prizes{
+        flex-direction: column;
+        height: 500vh;
+        max-height: 1700px;
+    }
+    .prize-1{
+        background-color: white;
+        border-radius: 20px;
+        height: 80vh;
+        max-height: 380px;
+        text-align: center;
+        width: 100%;
+        margin: 10px;
+    }
+    footer{
+        padding: 30px;
+        height: 120vh;
+        max-height: 650px;
+    }
+    footer li{
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    .footer-links{
+        flex-direction: column;
+        padding: 30px;  
+    }
+    .footer-links li{
+        margin-top: 20px;
+    }
+    .testimonials{
+        background-color: #E5E5E5; 
+        height: 80vh;
+        max-height: 400px;
+        padding:30px;
+    }
+    /* ABOUT PAGE */
+    .about-content{
+        line-height: 30px;
+        padding: 30px;
+    }
+    /* CONTACT PAGE */
+.contact{
+    flex-direction: column-reverse;
+    height: 850px;
+    padding: 30px;
+}
+.contact-left{
+    width: 100%;
+}
+.contact-right{
+    width: 100%;
+}
+/* prize details */
+.prize-details{
+    flex-direction: column;
+    max-height: 850px;
+    height: 150vh;
+    padding: 30px;
+}
+.prize-details-left{
+    width: 100%;
+}
+.prize-details-right{
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+}
+
+@media(orientation: landscape){
+    /* body{
+        background-color: green;
+    } */
+    .nav-bar {
+   
+        height: 80px;
+        padding: 12px 30px;
+      }
+    
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100; 
+        background-color: black;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+    .hero-box {
+        margin: 20px;
+        height: 230px;
+        line-height: 25px;
+        padding: 10px;
+    }
+    .hero-box {
+        margin: 20px;
+        height: 220px;
+        line-height: 25px;
+        padding: 10px;
+    }
+    .prizes{
+        flex-direction: column;
+        height: 800vh;
+        max-height: 2500px;
+    }
+    .prize-1{
+        background-color: white;
+        border-radius: 20px;
+        height: 150vh;
+        max-height: 780px;
+        text-align: center;
+        width: 100%;
+        margin: 10px;
+    }
+    footer{
+        padding: 30px;
+        height: 200vh;
+        max-height: 650px;
+    }
+    /* prize details */
+.prize-details{
+    flex-direction: column;
+    max-height: 900px;
+    height: 250vh;
+    padding: 30px;
+}
+.prize-details-left{
+    width: 100%;
+}
+.prize-details-right{
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+}
+}
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    body{
+        /* background-color: red; */
+        font-size: 1.2rem;
+    }
+    .nav-bar {
+   
+        height: 80px;
+        padding: 12px 30px;
+      }
+    
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100; 
+        background-color: black;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+    .hero-box {
+        margin: 20px;
+        height: 230px;
+        line-height: 25px;
+        padding: 10px;
+    }
+    .prizes{
+        flex-direction: column;
+        height: 1000vh;
+        max-height: 3400px;
+    }
+    .prize-1{
+        background-color: white;
+        border-radius: 20px;
+        height: 220vh;
+        max-height: 780px;
+        text-align: center;
+        width: 100%;
+        margin: 10px;
+    }
+    footer{
+        padding: 30px;
+        height: 200vh;
+        max-height: 650px;
+    }
+    footer li{
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    .footer-links{
+        flex-direction: column;
+        padding: 30px;  
+    }
+    .footer-links li{
+        margin-top: 20px;
+    }
+ /* CONTACT PAGE */
+ .contact{
+    flex-direction: column-reverse;
+    height: 850px;
+    padding: 30px;
+}
+.contact-left{
+    width: 100%;
+}
+.contact-right{
+    width: 100%;
+}
+/* prize details */
+.prize-details{
+    flex-direction: column;
+    max-height: 900px;
+    height: 250vh;
+    padding: 30px;
+}
+.prize-details-left{
+    width: 100%;
+}
+.prize-details-right{
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+}
+}
